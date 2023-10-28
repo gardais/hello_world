@@ -12,7 +12,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v4
-      - uses: wemake-services/wemake-python-styleguide@master
+      - uses: gardais/wemake-python-styleguide@master
         with:
           reporter: 'github-pr-review'
         env:
