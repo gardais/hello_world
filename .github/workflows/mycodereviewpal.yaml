@@ -11,14 +11,9 @@ jobs:
   code_review:
       runs-on: ubuntu-latest
       steps:
-      - name: checkout repo
-        uses: actions/checkout@v4
-        with:
-          path: src
-      - name: wemake-python-styleguide
-        uses: wemake-services/wemake-python-styleguide@master
+      - uses: actions/checkout@v4
+      - uses: wemake-services/wemake-python-styleguide@master
         with:
           reporter: 'github-pr-review'
-          path: '.'
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
